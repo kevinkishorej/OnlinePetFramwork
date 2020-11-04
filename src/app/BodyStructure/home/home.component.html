@@ -1,0 +1,59 @@
+<div >
+    <div  >
+      <div  >
+        <mdb-navbar  SideClass="navbar navbar-expand-lg navbar-dark   " mdbStickyHeader>
+          <mdb-navbar-brand><h1> Filter </h1>
+          <div   >
+            <br>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input type="text"
+                         placeholder="Location"
+                         class="text"
+                         matInput
+                         [formControl]="myControl"
+                         [(ngModel)]="Location"
+                         name="Location"
+                         [matAutocomplete]="autolo"
+                         (input)="Filter($event.target.value)">
+                         <button mat-button *ngIf="Location" matSuffix mat-icon-button aria-label="Clear" (click)="clear()">
+                          <mat-icon>close</mat-icon>  
+                        </button>
+                  <mat-autocomplete autoActiveFirstOption #autolo="matAutocomplete">
+                    <mat-option *ngFor="let location of filteredOptions | async " [value]="location">
+                      {{location}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+                <button mat-raised-button (click)="search()">Search</button>
+              </form>
+             </div>
+            </mdb-navbar-brand>
+        </mdb-navbar>
+        <div style="height: 20vh"> </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container"  >
+  <div class="row" >
+
+    <div class="col-6 col-md-3 col-sm-4 margin d-flex align-items-stretch"  *ngFor ="let titles of productinfo  | reverse">
+      <a  (click)="card(titles)">
+      <div class="card rounded border border-muted mat-elevation-z1">
+        <img class="card-img-top image" src="{{titles.image1[0]}}" alt="Card image cap">
+        <div class="card-body margin  h-100 ">
+          <p class="card-text font"><b>Price {{titles.price}} :RS</b></p>
+          <p class="card-text font">{{titles.title}}</p>
+          <p class="card-text text-right font2"><small class="text-muted">{{titles.location}}&nbsp;</small><small class="text-muted">{{titles.date | date:"mediumDate"}}</small></p>
+        </div>
+      </div>
+    </a>
+    </div>
+  </div>
+
+</div>

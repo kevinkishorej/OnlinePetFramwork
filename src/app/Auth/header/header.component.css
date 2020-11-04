@@ -1,0 +1,45 @@
+.navbar-fixed-top {
+    position: sticky;   
+    right: 0; 
+    left: 0; 
+    z-index: 1500;
+    top: 0;
+}
+img{
+    width: 40px;
+    height: 40px;
+
+}
+.c{
+    color: rgb(245, 229, 7);
+    font-size: 35px;
+}
+.title{
+    font-size: 20px;
+} 
+
+
+
+a{
+    color:black; 
+    font-size: 15px;
+    padding: 10px;
+}
+a:hover {
+    color:rgb(112, 106, 106);
+    text-decoration: none;
+   
+}
+nav{
+    background-color:#EBEDEF   ;
+}
+
+.hidden {
+  padding: 0px;
+}
+
+@media screen and (max-width:400px){
+  .hidden,.c{
+    font-size: 0;
+  }
+}

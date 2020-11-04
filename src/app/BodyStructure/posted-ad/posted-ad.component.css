@@ -1,0 +1,58 @@
+.class{
+    text-align: center;
+    margin-top: 100px;
+}
+.image{
+    width: 169x;
+    height:140px;
+    padding: 5px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.margin{
+    padding: 10px;
+}
+ 
+mat-card {
+     padding: 10px;
+}
+
+.margin{
+    margin: 5px;
+}
+
+.postbutton{
+    text-align: center;
+}
+
+mat-card:hover{
+    cursor: pointer;
+}
+
+.swal-wide{
+    width:850px;
+}
+.buttoncol{
+    background-color:#EBEDEF   ;
+}
+
+@media screen and (max-width:900px){
+    .font{
+        font-size: 11px;
+    }
+    .font2{
+        font-size: 11px;
+    }
+    .postbutton{
+        text-align: center;
+        font-size: 12px;
+    }
+    .hight{
+        height: 230px;
+    }
+}

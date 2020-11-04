@@ -1,0 +1,109 @@
+<!-- <div class="background">
+   <div class="class">
+       <br>
+       <mat-card class="example-card">
+           <h2>Register Form </h2>
+           <br>
+           <form class="example-form"  [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+               <div>
+                   <mat-form-field class="example-full-width">
+                       <mat-label>Name</mat-label>
+                       <input matInput type="text"formControlName="name">
+                     </mat-form-field>
+               </div>
+               <div>
+                   <mat-form-field class="example-full-width">
+                       <mat-label>E-mail</mat-label>
+                       <input matInput type="email" formControlName="email">
+                     </mat-form-field>
+               </div>
+               <div>
+                   <mat-form-field class="example-full-width">
+                       <mat-label>Profile name</mat-label>
+                       <input matInput type="text" formControlName="profilename">
+                     </mat-form-field>
+               </div>
+               <div>
+                   <mat-form-field class="example-full-width">
+                       <mat-label>Password</mat-label>
+                       <input matInput type="password" formControlName="password">
+                     </mat-form-field>
+               </div>
+               <div>
+                   <mat-form-field class="example-full-width">
+                       <mat-label>Confirm Password</mat-label>
+                       <input matInput type="password">
+                     </mat-form-field>
+               </div>       
+               <br>
+               <div class="button">
+               <button mat-raised-button type="submit" color="primary">Sign-Up</button>&nbsp;&nbsp;
+               <button mat-raised-button type="reset" color="primary">Cancel</button>
+               </div>
+             </form>
+       </mat-card>
+       <br>
+   </div>
+   </div> -->
+
+
+
+   <div class="background">
+       <div class="container">
+           <br>
+           <div class="row">
+               <div class=" col-md-3"> 
+
+               </div>
+               <div class="col-md-6">
+
+                <mat-card class="example-card">
+                    <h2 class="font"><b>Register Form</b> </h2>
+                    <br>
+                    <form class="example-form"  [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+                        <div>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Name</mat-label>
+                                <input matInput type="text"formControlName="name">
+                              </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>E-mail</mat-label>
+                                <input matInput type="email" formControlName="email">
+                              </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Profile name</mat-label>
+                                <input matInput type="text" formControlName="profilename">
+                              </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password"  formControlName="password">
+                              </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput type="password" formControlName="conpass" >
+                              </mat-form-field>
+                        </div>       
+                        <br>
+                        <div class="button">
+                        <button mat-raised-button  type="submit" [disabled]="userForm.invalid" color="primary" class="but">Sign-Up</button>&nbsp;&nbsp;
+                        <button mat-raised-button type="reset" color="primary" class="but"><span >Canel</span></button>
+                        </div>
+                      </form>
+                </mat-card>
+
+                </div>
+                <div class=" col-md-3">
+
+                </div>
+           </div>
+           <br>
+       </div>
+   </div>

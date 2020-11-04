@@ -1,0 +1,12 @@
+.class{
+    background-color: cadetblue;
+}
+
+@media screen and (max-width:400px){
+    .font{
+        font-size: 12px;
+    }
+    .fonth{
+        font-size: 14px;
+    }
+}

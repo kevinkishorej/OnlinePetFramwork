@@ -1,0 +1,42 @@
+
+<div class="class" *ngIf="!userData" class="postbutton">
+    <h2>You haven't posted anything yet</h2>
+    <p>Now you can sell your pet in <br>Online pet shop</p>
+    <br>
+    <button class="postbutton" mat-raised-button (click)="post()" >Post Add</button>
+</div>
+<br> 
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-3 col-sm-4  margin d-flex align-items-stretch "  *ngFor ="let titles of userData | reverse">
+           
+            <div class="card rounded border border-muted mat-elevation-z1 ">
+              <a  (click)="card(titles)">
+              <img class="card-img-top image" src="{{titles.image1[0]}}" alt="Card image cap">
+              <div class="card-body margin  h-100 ">
+                <p class="card-text font"><b>Price {{titles.price}} :RS</b></p>
+                <p class="card-text font">{{titles.title}}</p>
+                <p class="card-text text-right font2"><small class="text-muted">{{titles.location}}</small>&nbsp;&nbsp;<small class="text-muted">{{titles.date | date:"mediumDate"}}</small></p>
+                
+              </div>
+            </a>
+            <button mat-raised-button  (click)="delet(titles)" class="card-text font buttoncol">Selled</button>
+            </div>
+          
+          
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div *ngIf="userData"  class="postbutton">
+    <h2>Make some extra cash by selling</h2>
+    <p>Now you can sell your pet in <br>Online pet shop</p>
+    <button mat-raised-button (click)="post()" >Post Add</button>
+</div>
+<br>
+<br>

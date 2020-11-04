@@ -1,0 +1,39 @@
+
+  <div >
+    <div class="row">
+      <div class="col-12">
+        <mat-card class="example-card">
+          <h2 class="text-center size"><b>{{userData?.profilename}}</b></h2>
+          <mat-card-header>
+            
+          </mat-card-header>
+          <div *ngIf="!userimage">
+        <img class="img rounded-circle border border-dark" mat-card-image src="./assets/Profile.png" ><br>
+         </div>
+         <div *ngIf="userimage">
+        <img class="img rounded-circle border border-dark circle" mat-card-image src="{{userData?.userimage}}" ><br>
+       </div>
+        <div class="a">
+          <button  mat-raised-button  class="b2 text-center" > 
+          <label for="file">
+            <img width="20px" class="edite" *ngIf="Spinner" height="20px" src="./assets/loading-icon .gif">
+            <mat-icon class="edite" *ngIf="!Spinner">cloud_upload</mat-icon></label>
+          </button>
+
+         <input type="file" id="file" (change)="filechoose($event)"  value="save">
+        </div>
+        <br>
+        <hr>
+        <mat-card-subtitle>E-mail: {{userData?.email}}</mat-card-subtitle>
+        <hr>
+        <mat-card-subtitle>Name: {{userData?.name}}</mat-card-subtitle>
+        <hr>
+        <mat-card-subtitle>Location: {{userData?.location}}</mat-card-subtitle>
+        <hr>       
+        </mat-card> 
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  <button mat-raised-button (click)="butt(userData)" class="b">Edite Profile &nbsp;<mat-icon class="edite">edite</mat-icon></button>

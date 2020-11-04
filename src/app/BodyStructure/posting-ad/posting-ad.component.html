@@ -1,0 +1,128 @@
+
+<br><br>
+
+<h2><b>Post your Add</b></h2>
+
+<div class="container">
+  <div class="row" >
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10 border border-muted">
+      <h4><b>INCLUDE SOME DETAILS</b></h4>
+      <form  #userForm="ngForm" (ngSubmit)="submite()">
+      <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Title</mat-label>
+            <input required matInput type="text" maxlength="15" [(ngModel)]="title" name="title">
+          </mat-form-field>
+      </div>
+      <br>
+      <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Breed</mat-label>
+            <input matInput type="text" [(ngModel)]="breed" name="breed">
+          </mat-form-field>
+      </div>
+      <br>
+      
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input required type="text"
+                 placeholder="Location "
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [(ngModel)]="location"
+                 name="location"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
+
+
+
+      <br>
+      <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Address</mat-label>
+            <input required matInput type="text" [(ngModel)]="address" name="address">
+          </mat-form-field>
+      </div>
+      <br>
+      <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Contact Number</mat-label>
+            <input required matInput  type="number"[(ngModel)]="phonenumber" name="phonenumber">
+          </mat-form-field>
+      </div>
+      <br>
+      <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Pet Age</mat-label>
+            <input matInput type="text" [(ngModel)]="petage" name="petage">
+          </mat-form-field>
+      </div>
+      <br>
+      <div class="row" >
+        <div  class="col-md-3 image">
+        
+          <label for="productfile1"><img [src]="url1"  class="rounded border border-muted" alt="Cinque Terre" width="100%" height="100px"><br></label>
+          <input required.change type="file" id="productfile1" (change)="choose($event)" value="save">
+        </div>
+        <div  class="col-md-3 image">
+        
+          <label for="productfile2"><img [src]="url2"  class="rounded border border-muted" alt="Cinque Terre" width="100%" height="100px"><br></label>
+          <input type="file" id="productfile2" (change)="choose2($event)" value="save">
+        </div>
+        <div  class="col-md-3 image">
+        <label for="productfile3"><img [src]="url3"  class="rounded border border-muted" alt="Cinque Terre" width="100%" height="100px"><br></label>
+        <input type="file" id="productfile3" (change)="choose3($event)" value="save">
+        </div>
+    </div>
+    <p class="text-muted">Images is required **</p>
+      <br>
+      <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Set Price</mat-label>
+            <input matInput required  type="number"[(ngModel)]="Price" name="Price" > 
+          </mat-form-field>
+      </div>
+      
+      <br>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="text"
+                 placeholder="Negotiable"
+                 matInput
+                 [(ngModel)]="negotiable"
+                 name="negotiable"
+                 [matAutocomplete]="auto1">
+          <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
+            <mat-option *ngFor="let negotiable of nego" [value]="negotiable">
+              {{negotiable}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <br>
+       
+      </form>
+      <br>   
+      <button mat-raised-button color="primary"  type="submit" [disabled]="userForm.invalid" class="but">
+        <img width="20px" *ngIf="Spinner" height="20px" src="./assets/spinner 2.gif">&nbsp;Post</button>&nbsp;&nbsp;
+      <button mat-raised-button  type="reset" class="but">Cancel</button>&nbsp;&nbsp;
+      <br>
+      <br>
+    </form>
+    </div>
+    <div class="col-md-1"> 
+    </div>
+  </div>
+</div>
+
+<br>
+<br>

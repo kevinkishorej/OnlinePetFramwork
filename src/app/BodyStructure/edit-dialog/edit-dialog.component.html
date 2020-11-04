@@ -1,0 +1,65 @@
+<!-- <h2>Edit Invoice</h2>
+<form [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+<mat-form-field appearance="fill">
+    <mat-label>Profilename
+  </mat-label>
+    <input matInput  [(ngModel)]="profilename" formControlName="profilename" >   
+</mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+<mat-form-field appearance="fill">
+    <mat-label>E-mail
+  </mat-label>
+    <input matInput  [(ngModel)]="email" formControlName="email">   
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Name
+  </mat-label>
+    <input matInput  [(ngModel)]="name" formControlName="name">   
+</mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+<mat-form-field appearance="fill">
+    <mat-label>Location 
+  </mat-label>
+    <input matInput  [(ngModel)]="location" formControlName="location">   
+</mat-form-field>
+
+<br>
+<div mat-dialog-actions>
+<button mat-raised-button color="primary" type="submit" mat-dialog-close>Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button mat-button mat-dialog-close (click)="get()">Cancel</button>
+</div>
+</form> -->
+
+<div>    
+  <div class="row">
+    <h2 class="font">Edit Invoice</h2>
+    <form [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+    <mat-form-field  class="example-full-width col-12 col-md-6 col-sm-6" appearance="fill" >
+        <mat-label>Profilename
+      </mat-label>    
+        <input matInput class="font" [(ngModel)]="profilename " formControlName="profilename" >   
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field   class="example-full-width col-12  col-md-6 col-sm-6" appearance="fill">
+        <mat-label>E-mail
+      </mat-label>
+        <input matInput class="font" [(ngModel)]="email" formControlName="email">   
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width col-12  col-md-6 col-sm-6" appearance="fill">
+        <mat-label>Name
+      </mat-label>
+        <input matInput class="font" [(ngModel)]="name" formControlName="name">   
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field class="example-full-width col-12  col-md-6 col-sm-6" appearance="fill">
+        <mat-label>Location 
+      </mat-label>
+        <input matInput class="font" [(ngModel)]="location" formControlName="location">   
+    </mat-form-field>
+
+    <br>
+<div mat-dialog-actions>
+<button class="button" mat-raised-button color="primary" type="submit" mat-dialog-close>Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button" mat-button mat-dialog-close (click)="get()">Cancel</button>
+</div>
+    </form>
+  </div>    
+</div>

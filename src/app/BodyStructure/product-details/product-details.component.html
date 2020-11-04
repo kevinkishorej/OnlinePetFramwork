@@ -1,0 +1,99 @@
+<div *ngIf="Error">
+  <div style="height: 10vh"></div>
+<h1 class="text-center font-weight-bold text-secondary">
+   Error : {{Error}}
+  <div style="height: 40vh"></div>
+</h1>
+</div>
+
+<!-- IF -->
+
+<div *ngIf="!Error">
+<h1 class="margin2 max"><b>Detail view of the pet</b></h1>
+
+
+<div class="container">
+<div class="row" >
+  <div class="col-12 col-md-8 border border-muted rounded">
+
+    <div class="card rounded border border-muted mat-elevation-z1">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div >
+              <img  class="image" src="{{some?.image1[0]}}" alt="Random first slide" width="100%" height="300px">
+            </div>
+            <div class="carousel-caption">
+              <h3>10 seconds between slides...</h3>
+              <p class="hidden">This carousel uses customized default values.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide  *ngIf="image.length > 1">
+            <div >
+              <img class="image" src="{{some?.image1[1]}}" alt="Random second slide" width="100%" height="300px">
+            </div>
+            <div class="carousel-caption">
+              <h3>10 seconds between slides...</h3>
+              <p class="hidden">This carousel doesn't pause or resume on mouse events</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide *ngIf="image.length > 2">
+            <div >
+              <img class="image" src="{{some?.image1[2]}}" alt="Random third slide" width="100%" height="300px">
+            </div>
+            <div class="carousel-caption">
+              <h3>10 seconds between slides....</h3>
+              <p class="hidden">This carousel uses customized default values.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
+  
+    <div class="col-md-4 border border-muted rounded">
+        
+        <div class="margin ">
+            <h2 class="text-center font"><u><b>Pet Details</b></u></h2>
+            <h2 class="font"> <b>RS : {{some?.price}}</b></h2>
+            <p class="font">{{some?.title}}</p>
+           
+            
+            <hr>
+            <h2 class="text-center font"><u><b>Contact Details</b></u></h2>
+            <h2  class="font"><span class="material-icons" style="color:#1683F1;">
+              stay_current_portrait
+              </span>&nbsp;{{some?.phonenumber}}</h2>
+            <p  class="font"><span class="material-icons primary" style="color:#1683F1;">
+              location_on
+              </span >&nbsp;<b >{{some?.location}}</b></p>
+            
+        </div>
+       
+    </div>
+    </div>
+</div>
+    <br>
+<div class="container" >
+
+    <div class="row font"  >
+      
+        <div  class="col-6 col-md-3 col-sm-6 border border-muted rounded"   >
+        <h3 class="text-center font"><u><b>Breed</b></u></h3>
+        <p class="text-center font">{{some?.breed}}</p>
+        </div>
+        <div  class="col-6 col-md-3 col-sm-6 border border-muted rounded"  >
+        <h3 class="text-center font"><u><b>Pet-Age</b></u></h3>
+        <p class="text-center font">{{some?.petage}}</p> 
+        </div>
+        <div  class="col-6 col-md-3 col-sm-6 border border-muted rounded"  >
+        <h3 class="text-center font"><u><b>Negotiable</b></u></h3>
+        <p class="text-center font">{{some?.negotiable}}</p>
+        </div>
+        <div  class="col-6 col-md-3 col-sm-6 border border-muted rounded"  >
+        <h3 class="text-center font"><u><b>Address</b></u></h3>
+        <p class="text-center font">{{some?.address}}</p>
+        </div>
+   
+    </div>
+  
+</div>
+</div>

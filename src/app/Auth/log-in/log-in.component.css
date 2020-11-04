@@ -1,0 +1,39 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 80%;
+    margin-left: 40px;
+  }
+
+  .class{
+      margin-left: 300px;
+  }
+  
+  .background{
+    background-image: url('/assets/Background.png');
+  }
+ 
+  .button,h2{
+      text-align: center;
+  }
+  
+  @media screen and (max-width:400px){
+    .example-full-width{
+      margin-left: 5px;
+    }
+    .but{
+      font-size: 12px;
+      width: 20px;
+      height: 28px;
+      text-align: justify;
+      padding-bottom: 15px;
+      
+    }
+    .font{
+      font-size: 14px;
+    }
+  }
